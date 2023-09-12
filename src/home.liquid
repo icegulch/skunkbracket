@@ -1,0 +1,62 @@
+---
+  permalink: "/index.html"
+  layout: "layouts/base.liquid"
+---
+
+<h1>Golden Wrench Brackets</h1>
+
+<div class="tournament-bracket tournament-bracket--rounded">
+  <div class="tournament-bracket__round tournament-bracket__round--quarterfinals">
+    <h3 class="tournament-bracket__round-title">
+      Quarterfinals
+    </h3>
+    <ul class="tournament-bracket__list">
+      {% for quarterfinal in quarterfinals %}
+        <li class="tournament-bracket__item">
+          <div class="tournament-bracket__match" tabindex="0">
+            <table class="tournament-bracket__table">
+              <caption class="tournament-bracket__caption">
+                <time datetime="Vote by {{ quarterfinal.end_date | date: '%Y-%B-%M' }}">Vote by {{ quarterfinal.end_date | date: "%B %m, %Y" }}</time>
+              </caption>
+              <thead class="sr-only">
+                <tr>
+                  <th>Station Beneficiary</th>
+                  <th>Vehicle</th>
+                  <th>Score</th>
+                </tr>
+              </thead>
+              <tbody class="tournament-bracket__content">
+                <tr class="tournament-bracket__team tournament-bracket__team--winner">
+                  <td class="tournament-bracket__country">
+                    {{ quarterfinal.contestants.first.station }}
+                  </td>
+                  <td class="tournament-bracket__country">
+                    {{ quarterfinal.contestants.first.year }} {{ quarterfinal.contestants.first.make }} {{ quarterfinal.contestants.first.model }}
+                  </td>
+                  <td class="tournament-bracket__score">
+                    <span class="tournament-bracket__number">
+                      {{ quarterfinal.contestants.first.score }}
+                    </span>
+                  </td>
+                </tr>
+                <tr class="tournament-bracket__team">
+                  <td class="tournament-bracket__country">
+                    {{ quarterfinal.contestants.last.station }}
+                  </td>
+                  <td class="tournament-bracket__country">
+                    {{ quarterfinal.contestants.last.year }} {{ quarterfinal.contestants.last.make }} {{ quarterfinal.contestants.last.model }}
+                  </td>
+                  <td class="tournament-bracket__score">
+                    <span class="tournament-bracket__number">
+                      {{ quarterfinal.contestants.last.score }}
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
