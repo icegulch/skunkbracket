@@ -1,0 +1,42 @@
+[
+  {
+    "start_date": "2023-11-15T00:00:00.000Z",
+    "end_date": "2023-11-22T00:00:00.000Z",
+    "contestants": [
+      {
+        "year": "1970",
+        "make": "Chevrolet",
+        "model": "Chevelle",
+        "station": "WDET",
+        "score": ""
+      },
+      {
+        "year": "1956",
+        "make": "Porsche",
+        "model": "Replica",
+        "station": "WBUR",
+        "score": ""
+      }
+    ]
+  },
+  {
+    "start_date": "2023-11-15T00:00:00.000Z",
+    "end_date": "2023-11-22T00:00:00.000Z",
+    "contestants": [
+      {
+        "year": "1961",
+        "make": "Jaguar",
+        "model": "Mark II",
+        "station": "MPR",
+        "score": ""
+      },
+      {
+        "year": "1976",
+        "make": "Volkswagen",
+        "model": "Beetle",
+        "station": "KNKX",
+        "score": ""
+      }
+    ]
+  }
+]

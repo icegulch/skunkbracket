@@ -4,23 +4,9 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 15px;
+  font-size: 14px;
 }
-@media (min-width: 38em) {
-  html {
-    font-size: 14px;
-  }
-}
-@media (min-width: 52em) {
-  html {
-    font-size: 15px;
-  }
-}
-@media (min-width: 72em) {
-  html {
-    font-size: 16px;
-  }
-}
+
 body {
   background-color: #f1f1f1;
   font-family: sans-serif;
